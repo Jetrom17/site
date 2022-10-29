@@ -1,745 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<style>
-	/* RESET */
-	* {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-	}
 
-	/* HTML5 display-role reset for older browsers */
-	article,
-	aside,
-	details,
-	figcaption,
-	figure,
-	footer,
-	header,
-	hgroup,
-	menu,
-	nav,
-	section {
-		display: block;
-	}
-
-	body {
-		line-height: 1;
-	}
-
-	ol,
-	ul {
-		list-style: none;
-	}
-
-	blockquote,
-	q {
-		quotes: none;
-	}
-
-	blockquote:before,
-	blockquote:after,
-	q:before,
-	q:after {
-		content: "";
-		content: none;
-	}
-
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-	}
-
-	/* END - RESET */
-	/* VARIAVEIS */
-	:root {
-		--color-bg: #212429;
-		--color-primary: #ff9d01;
-		--color--secundary: #c4cfde;
-		--color-bg-clear: #ecf0f2;
-		--color-primary-clear: #3d3e41;
-		--color-lp-clear: #e3e8ec;
-	}
-
-	/* PADRÃO */
-	body {
-		font-family: "Montserrat", "sans-serif";
-		background-color: var(--color-bg);
-	}
-
-	/* START - EDIT HEADER */
-	header {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-around;
-		margin: 30px;
-	}
-
-	.content {
-		transition: all 1s;
-	}
-
-	.content:hover {
-		transform: translateY(-10px);
-	}
-
-	.container {
-		padding: 30px;
-		background-color: var(--color-bg);
-		box-shadow: 10px -5px 1em rgba(0, 0, 0, 0.253),
-			-5px 10px 1em rgba(255, 255, 255, 0.048);
-		border-radius: 12px;
-	}
-
-	.infors-perfil {
-		margin-bottom: 35px;
-	}
-
-	.infors-perfil i.far {
-		padding: 10px;
-		margin-bottom: 20px;
-		color: #fff;
-		background-color: var(--color-primary);
-		border-radius: 100%;
-		box-shadow: 0 0 0 10px #ff9e0173;
-	}
-
-	.infors-perfil h1 {
-		color: #fff;
-		padding-bottom: 15px;
-		font-weight: 900;
-		font-size: 30pt;
-	}
-
-	.infors-perfil p {
-		padding-bottom: 45px;
-		color: var(--color--secundary);
-		font-weight: 500;
-		text-align: justify;
-		font-size: 11pt;
-	}
-
-	.redes-sociais p {
-		padding-bottom: 10px;
-		color: var(--color--secundary);
-		font-weight: 500;
-		text-align: justify;
-		font-size: 11pt;
-	}
-
-	.redes-sociais ul {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.redes-sociais li {
-		cursor: pointer;
-		padding: 20px;
-		background: linear-gradient(45deg, #202125, #23262b);
-		color: var(--color--secundary);
-		box-shadow: 10px -5px 1em rgba(0, 0, 0, 0.253),
-			-5px 10px 1em rgba(255, 255, 255, 0.048);
-		border-radius: 7px;
-		transition: all 1s;
-	}
-
-	.redes-sociais li:hover {
-		background: linear-gradient(45deg, #23262b, #202125);
-		color: #fff;
-		transform: translateY(-10px);
-	}
-
-	.contato p {
-		padding-bottom: 10px;
-		color: var(--color--secundary);
-		font-weight: 500;
-		text-align: justify;
-		font-size: 12pt;
-	}
-
-	.contato .btns {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.contato button {
-		cursor: pointer;
-		padding: 20px;
-		color: var(--color-primary);
-		background: linear-gradient(45deg, #202125, #23262b);
-		box-shadow: 10px -5px 1em rgba(0, 0, 0, 0.253),
-			-5px 10px 1em rgba(255, 255, 255, 0.048);
-		border-radius: 7px;
-		transition: all 1s;
-	}
-
-	.contato button:hover {
-		background: linear-gradient(45deg, #23262b, #202125);
-		transform: translateY(-10px);
-	}
-
-	.foto-perfil {
-		border-radius: 12px;
-	}
-
-	/* END - EDIT HEADER */
-	/* START - EDIT MAIN */
-	main {
-		margin: 30px;
-		text-align: center;
-	}
-
-	main hr {
-		margin: 100px 0px 100px 0px;
-		border: solid 0.5px #36393f;
-	}
-
-	main p {
-		padding-bottom: 10px;
-		color: var(--color-primary);
-		font-weight: 500;
-		font-size: 12pt;
-	}
-
-	main h1 {
-		padding-bottom: 80px;
-		color: var(--color--secundary);
-		font-weight: 900;
-		font-size: 35pt;
-	}
-
-	.container-projeto {
-		display: flex;
-		justify-content: space-around;
-		padding: 30px;
-		color: var(--color-primary);
-		background: linear-gradient(45deg, #202125, #23262b);
-		box-shadow: 10px -5px 1em rgba(0, 0, 0, 0.253),
-			-5px 10px 1em rgba(255, 255, 255, 0.048);
-		border-radius: 7px;
-		transition: all 1s;
-	}
-
-	.container-projeto:hover {
-		background: linear-gradient(45deg, #23262b, #202125);
-	}
-
-	.container-projeto:not(:last-child) {
-		margin-bottom: 20px;
-	}
-
-	.projetos a {
-		display: flex;
-		justify-content: space-around;
-		outline: none;
-		text-decoration: none;
-	}
-
-	.projetos img {
-		max-width: 250px;
-		border-radius: 12px;
-		transition: all 1s;
-	}
-
-	.projetos img:hover {
-		transform: scale(1.12);
-	}
-
-	.projetos div {
-		text-align: start;
-		margin-left: 25px;
-	}
-
-	.projetos span {
-		padding: 5px;
-		margin-bottom: 10px;
-		font-size: 9pt;
-		background-color: rgba(255, 255, 255, 0.301);
-		color: var(--color--secundary);
-		border-radius: 25px;
-	}
-
-	.projetos h1 {
-		margin-top: 15px;
-		padding-bottom: 5px;
-		color: var(--color--secundary);
-		font-weight: 700;
-		font-size: 25pt;
-	}
-
-	.projetos h2 {
-		padding-bottom: 25px;
-		color: var(--color--secundary);
-		font-weight: 600;
-		font-size: 20pt;
-	}
-
-	.projetos p {
-		width: 80%;
-		margin-top: 5px;
-		padding-bottom: 10px;
-		text-align: justify;
-		color: var(--color--secundary);
-		font-weight: 500;
-		font-size: 11pt;
-	}
-
-	.projetos .like {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-end;
-	}
-
-	/* END - EDIT MAIN */
-	/* START - EDIT FOOTER*/
-	footer {
-		display: flex;
-		justify-content: center;
-		flex-shrink: 0;
-		background-color: var(--color-bg);
-		text-align: center;
-		font-weight: 600;
-		color: var(--color-primary);
-		box-shadow: 0 0 0.5em #000;
-		flex-direction: column;
-	}
-
-	footer button {
-		width: 40%;
-		margin: 35px auto 15px auto;
-		margin-left: auto;
-		margin-right: auto;
-		cursor: pointer;
-		padding: 20px;
-		color: var(--color-primary);
-		background: linear-gradient(45deg, #202125, #23262b);
-		box-shadow: 10px -5px 1em rgba(0, 0, 0, 0.253),
-			-5px 10px 1em rgba(255, 255, 255, 0.048);
-		border-radius: 7px;
-		transition: all 1s;
-	}
-
-	footer button:hover {
-		background: linear-gradient(45deg, #23262b, #202125);
-		transform: translateY(-10px);
-	}
-
-	footer p {
-		text-align: center;
-		padding-bottom: 20px;
-	}
-
-	/* END - EDIT FOOTER*/
-	/* CLEAR MODE */
-	/* START - EDIT CLEAR HEADER */
-	.clear {
-		background-color: var(--color-bg-clear);
-	}
-
-	.clear .container {
-		background-color: var(--color-bg-clear);
-		color: var(--color-primary-clear);
-	}
-
-	.clear .infors-perfil h1 {
-		color: var(--color-primary-clear);
-	}
-
-	.clear .infors-perfil p {
-		color: var(--color-primary-clear);
-	}
-
-	.clear .redes-sociais p {
-		color: var(--color-primary-clear);
-	}
-
-	.clear .redes-sociais li {
-		background: linear-gradient(45deg,
-				var(--color-lp-clear),
-				var(--color-bg-clear));
-		color: var(--color-primary-clear);
-	}
-
-	.clear .redes-sociais li:hover {
-		background: linear-gradient(45deg,
-				var(--color-lp-clear),
-				var(--color-bg-clear));
-		color: var(--color-primary);
-	}
-
-	.clear .contato p {
-		color: var(--color-primary-clear);
-	}
-
-	.clear .contato button {
-		background: linear-gradient(45deg,
-				var(--color-lp-clear),
-				var(--color-bg-clear));
-		color: var(--color-primary);
-		transition: all 1s;
-	}
-
-	.clear .contato button:hover {
-		background: var(--color-primary);
-		color: #fff;
-	}
-
-	/* END - EDIT CLEAR HEADER */
-	/* START - EDIT CLEAR MAIN */
-	.clear main hr {
-		border: solid 0.5px #cbcbcc;
-	}
-
-	.clear main h1 {
-		color: var(--color-primary-clear);
-	}
-
-	.clear .container-projeto {
-		background: linear-gradient(45deg,
-				var(--color-lp-clear),
-				var(--color-bg-clear));
-		transition: all 1s;
-	}
-
-	.clear .container-projeto:hover {
-		background: linear-gradient(45deg,
-				var(--color-bg-clear),
-				var(--color-lp-clear));
-	}
-
-	.clear .projetos span {
-		background-color: var(--color-primary);
-		color: #fff;
-	}
-
-	.clear .projetos h1 {
-		color: var(--color-primary-clear);
-	}
-
-	.clear .projetos h2 {
-		color: var(--color-primary-clear);
-	}
-
-	.clear .projetos p {
-		color: var(--color-primary-clear);
-	}
-
-	/* END - EDIT CLEAR MAIN */
-	/* START - EDIT CLEAR FOOTER */
-	.clear footer {
-		background-color: var(--color-bg-clear);
-	}
-
-	.clear footer button {
-		background: linear-gradient(45deg,
-				var(--color-lp-clear),
-				var(--color-bg-clear));
-		color: var(--color-primary);
-		transition: all 1s;
-	}
-
-	.clear footer button:hover {
-		background: var(--color-primary);
-		color: #fff;
-	}
-
-	/* RESPONSIVIDADE
- * Código abaixo é responsavel por toda responsividade do site em 
- * dispositivos menores de 800px
- */
-	@media screen and (max-width: 800px) {
-
-		/* START - EDIT HEADER */
-		header {
-			display: block;
-			margin: 30px;
-		}
-
-		header .content {
-			justify-content: center;
-			margin-bottom: 30px;
-		}
-
-		.infors-perfil,
-		.infors-perfil p,
-		.redes-sociais p {
-			text-align: center;
-		}
-
-		.infors-perfil p,
-		.redes-sociais p,
-		.redes-sociais li,
-		.contato p {
-			font-size: 14pt;
-		}
-
-		.img {
-			display: flex;
-			justify-content: center;
-		}
-
-		/* END - EDIT HEADER */
-		/* START - EDIT MAIN */
-		.projetos div {
-			margin-left: 0px;
-		}
-
-		.projetos .like {
-			font-size: 14pt;
-		}
-
-		.container-projeto img {
-			margin-right: 15px;
-		}
-
-		/* END - EDIT MAIN */
-	}
-
-	/* Código abaixo é responsavel por toda responsividade do site em 
- * dispositivos menores de 540px
- */
-	@media screen and (max-width: 540px) {
-
-		/* START - EDIT HEADER */
-		.infors-perfil h1 {
-			font-size: 18pt;
-		}
-
-		.infors-perfil p,
-		.redes-sociais p,
-		.redes-sociais li,
-		.contato p {
-			font-size: 11pt;
-		}
-
-		.contato button {
-			padding: 15px;
-			font-size: 11pt;
-		}
-
-		.img img {
-			max-width: 250px;
-		}
-
-		/* END - EDIT HEADER */
-		/* START - EDIT MAIN */
-		main {
-			margin: 15px;
-		}
-
-		main h1 {
-			font-size: 25pt;
-		}
-
-		.container-projeto {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
-
-		.container-projeto a {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.container-projeto a div {
-			text-align: center;
-		}
-
-		.container-projeto img {
-			max-width: 300px;
-			margin-bottom: 25px;
-		}
-
-		.container-projeto h1 {
-			font-size: 18pt;
-		}
-
-		.container-projeto h2 {
-			font-size: 14pt;
-		}
-
-		.container-projeto p {
-			width: 100%;
-			font-size: 11pt;
-		}
-
-		.container-projeto .like {
-			align-items: center;
-		}
-
-		.container-projeto .like p {
-			text-align: center;
-		}
-
-		/* END - EDIT MAIN */
-	}
-
-	/* Código abaixo é responsavel por toda responsividade do site em 
- * dispositivos menores de 375px
- */
-	@media screen and (max-width: 400px) {
-
-		/* START - EDIT HEADER */
-		.contato button {
-			padding: 10px;
-			font-size: 10pt;
-		}
-
-		/* END - EDIT HEADER */
-		/* START - EDIT MAIN */
-		.projetos h1 {
-			font-size: 17pt;
-			line-height: 1.2;
-		}
-
-		.container-projeto img {
-			max-width: 250px;
-			margin-bottom: 25px;
-		}
-
-		/* END - EDIT MAIN */
-		/* START - EDIT FOOTER*/
-		footer button {
-			width: 60%;
-		}
-
-		footer p {
-			font-size: 10pt;
-		}
-
-		/* END - EDIT FOOTER*/
-	}
-</style>
-	<script>
-	var linkProjetos = [
-	{
-		linkProjeto: "https://codepen.io/denersonpinas/full/abwEpge",
-		linkImg:
-			"https://firebasestorage.googleapis.com/v0/b/wsremoto-1193d.appspot.com/o/smartmockups_ktx8gpup.jpg?alt=media&token=3d356564-0498-4ff0-8867-e0218497b280",
-		span: "2021 - Atual",
-		title: "Projeto AluraFlix",
-		subTitle: "Front-end",
-		resumo:
-			"Projeto produziodo para conclusão de desafio proposto pelo grupo alura, em seu evento #imersaodev, o projeto tinha foco em inicialização de dev no mercado de programação e as linguagens propostas era HTML, CSS e JS com foco em JavaScrip. Este desafio tinha como objetivo mostrar a utilização de arrays e laço de repetiçao com JS.",
-		like: 0
-	},
-	{
-		linkProjeto: "https://codepen.io/denersonpinas/full/gORKpMW",
-		linkImg:
-			"https://firebasestorage.googleapis.com/v0/b/wsremoto-1193d.appspot.com/o/smartmockups_ktx8i27z.jpg?alt=media&token=546c7dca-74bc-4da6-a6bc-121bbbbb1567",
-		span: "2021 - Atual",
-		title: "Projeto Super Trunfo - YuGiDEV",
-		subTitle: "Front-end",
-		resumo:
-			"Projeto produziodo para conclusão de desafio proposto pelo grupo alura, em seu evento #imersaodev, o projeto tinha foco em inicialização de dev no mercado de programação e as linguagens propostas era HTML, CSS e JS com foco em JavaScrip. Este desafio tinha como objetivo mostrar a utilização de arrays e laço de repetiçao com JS.",
-		like: 0
-	},
-	{
-		linkProjeto: "https://codepen.io/denersonpinas/full/MWoEpGy",
-		linkImg:
-			"https://firebasestorage.googleapis.com/v0/b/wsremoto-1193d.appspot.com/o/smartmockups_ktx8iy5e.jpg?alt=media&token=b6ad8360-d184-486c-a711-e0bc07e8e32b",
-		span: "2021 - Atual",
-		title: "Projeto Calculadora",
-		subTitle: "Front-end",
-		resumo:
-			"Projeto produziodo para conclusão de desafio proposto pelo grupo alura, em seu evento #imersaodev, o projeto tinha foco em inicialização de dev no mercado de programação e as linguagens propostas era HTML, CSS e JS com foco em JavaScrip. Este desafio tinha como objetivo mostrar a utilização de arrays e laço de repetiçao com JS.",
-		like: 0
-	},
-	{
-		linkProjeto: "https://codepen.io/denersonpinas/full/BaZxKMG",
-		linkImg:
-			"https://firebasestorage.googleapis.com/v0/b/wsremoto-1193d.appspot.com/o/smartmockups_ktx8juur.jpg?alt=media&token=dd4328e9-f416-4556-b247-bf94cd6e4ff2",
-		span: "2021 - Atual",
-		title: "Projeto Tabela de Classificação",
-		subTitle: "Front-end",
-		resumo:
-			"Projeto produziodo para conclusão de desafio proposto pelo grupo alura, em seu evento #imersaodev, o projeto tinha foco em inicialização de dev no mercado de programação e as linguagens propostas era HTML, CSS e JS com foco em JavaScrip. Este desafio tinha como objetivo mostrar a utilização de arrays e laço de repetiçao com JS.",
-		like: 0
-	}
-];
-
-function Projetos() {
-	var elementProjetos = document.getElementById("projetos");
-	var elemento = "";
-	console.log(linkProjetos.length);
-
-	for (let i = 0; i < linkProjetos.length; i++) {
-		const projeto = linkProjetos[i];
-
-		elemento += '<div class="container-projeto">';
-		elemento += '<a href="' + projeto.linkProjeto + '" target="_blanck">';
-		elemento += '<img src="' + projeto.linkImg + '" alt="' + projeto.title + '">';
-		elemento += "<div>";
-		elemento += "<span>" + projeto.span + "</span>";
-		elemento += "<h1>" + projeto.title + "</h1>";
-		elemento += "<h2>" + projeto.subTitle + "</h2>";
-		elemento += "<p>" + projeto.resumo + "</p>";
-		elemento += "</div>";
-		elemento += "</a>";
-		elemento += '<div class="like" onclick="like(' + i + ')">';
-		elemento += '<i class="far fa-heart"></i>';
-		elemento += '<p id="like' + i + '">' + projeto.like + "</p>";
-		elemento += "</div>";
-		elemento += "</div>";
-	}
-
-	elementProjetos.innerHTML = elemento;
-}
-
-function like(i) {
-	document.getElementById("like" + i).innerHTML = linkProjetos[i].like += 1;
-}
-
-function mudaTema() {
-	var elementButton = document.getElementById("clear");
-	document.body.classList.toggle("clear");
-
-	if (document.body.classList == "clear") {
-		elementButton.innerHTML = "DARK MODE";
-	} else {
-		elementButton.innerHTML = "CLEAR MODE";
-	}
-}
-	</script>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Perfil</title>
-	<script src="https://kit.fontawesome.com/7c831017e8.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolsonaro 2º Turno</title>
+
+  <meta name="title" content="Bolsonaro 2º Turno — Apoio ao Jair Bolsonaro com seu nome" />
+  <meta name="description"
+    content="Gere seu flyer personalizado com seu nome de apoio ao Jair Bolsonaro para o segundo turno das eleições brasileira." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://joaoeymard.github.io/bolsonaro2turno/" />
+  <meta property="og:title" content="Bolsonaro 2º Turno — Apoio ao Jair Bolsonaro com seu nome" />
+  <meta property="og:description"
+    content="Gere seu flyer personalizado com seu nome de apoio ao Jair Bolsonaro para o segundo turno das eleições brasileira." />
+  <meta property="og:image" itemprop="image" content="https://joaoeymard.github.io/bolsonaro2turno/metadata.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://joaoeymard.github.io/bolsonaro2turno/" />
+  <meta property="twitter:title" content="Bolsonaro 2º Turno — Apoio ao Jair Bolsonaro com seu nome" />
+  <meta property="twitter:description"
+    content="Gere seu flyer personalizado com seu nome de apoio ao Jair Bolsonaro para o segundo turno das eleições brasileira." />
+  <meta property="twitter:image" content="https://joaoeymard.github.io/bolsonaro2turno/metadata.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles/style.css?v=3">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169842087-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169842087-3');
+  </script>
+
 </head>
 
-<body onload="Projetos()">
-	<header>
-		<div class="content">
-			<div class="container infors-perfil">
-				<i class="far fa-user"></i>
-				<h1>Olá, eu sou <span style="color:#ff9d01">Jeiel</span></h1>
-				<p>Formado em Bombeiro Civil, estudante de Segurança Digital (UNAMA - PA) e formações de cursos relacionados a Tecnologia.</p>
-				<div class="redes-sociais">
-				</div>
-			</div>
-			<div class="container contato">
-				<p>Baixe meu apk para Whatsapp:</p>
-				<div class="btns">
-					<a href="https://download848.mediafire.com/na6em7xmv9jg/lmbnba9tru86z15/com.UmClique_1.1.apk" download="PDF" type="application/pdf"><button>DOWNLOAD</button></a>
-				</div>
-			</div>
-		</div>
-		<div class="content container img">
-			<img class="foto-perfil" src="https://i.imgur.com/8cOOMXR_d.webp?maxwidth=640&shape=thumb&fidelity=medium" alt="Foto Perfil">
-		</div>
-	</header>
-	<footer>
-		<button id="clear" onclick="mudaTema()">Modo Claro</button>
-		<p> Desenvolvido por <b>Jeiel Miranda - Jeiel17@protonmail.com (Email)</b></p>
-	</footer>
+<body>
+  <noscript>
+    <div>Para continuar habilite o JavaScript</div>
+  </noscript>
+
+  <div class="container">
+    <div class="navbar">
+      <a class="btn btnDoe" href="https://nubank.com.br/pagar/34k5f/YBpybYS3Ej" target="_blank">Doe</a>
+      <a class="btn btnAjuda" href="https://www.instagram.com/reel/CkQ2_IaJGgr/?igshid=YmMyMTA2M2Y="
+        target="_blank">Como compartilhar</a>
+    </div>
+    <div class="navbar navbar-menu">
+      <label class="btn btnMenu btnMenuFigura active" for="chkFigura">Figura</label>
+      <input id="chkFigura" name="chkMenu" type="radio" target="_blank" checked hidden></input>
+      <label class="btn btnMenu btnMenuFiltro" for="chkFiltro">Filtro</label>
+      <input id="chkFiltro" name="chkMenu" type="radio" target="_blank" hidden></input>
+    </div>
+
+    <canvas width="1080" height="1080"></canvas>
+
+    <div class="form-input">
+      <input name="yourname" type="text" placeholder="Coloque seu nome aqui" accept="image/*" />
+      <div>
+        <button id="btnSave" class="btn btnSave" href="javascript:saveImage()">Salvar</button>
+        <button id="btnShare" class="btn btnShare" href="javascript:shareImage()">Compartilhar</button>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://www.instagram.com/joaoeymard/" target="_blank">
+        <img src="img/instagram-logo.svg" />
+        <span>Feito por: @joaoeymard</span>
+      </a>
+      <a href="https://www.instagram.com/souocleison/" target="_blank">
+        <img src="img/instagram-logo.svg" />
+        <span>Desenhado por: @souocleison</span>
+      </a>
+
+      <a href="https://github.com/joaoeymard/bolsonaro2turno" target="_blank">
+        <img src="img/github-logo.svg" />
+        <span>joaoeymard/bolsonaro2turno</span>
+      </a>
+<!-- Ajudando a hospedar por curto período -->
+      <a href="https://github.com/Jeiel17" target="_blank">
+        <img src="img/github-logo.svg" />
+        <span>@Jeiel17</span>
+      </a>
+    </footer>
+  </div>
+
+  <script src="./scripts/script.js?v=3"></script>
 </body>
 
 </html>
