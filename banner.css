@@ -1,0 +1,43 @@
+/* COOKIE BANNER */
+.cookie-banner{
+	max-width: 100%;
+	position: fixed;
+	bottom: -100%;
+	left: 0;
+	background-color:#00002d;
+	color: white;
+	height: 20vh;
+	transition: 0.4s;
+	padding: 1rem;
+	font-size:x-large;
+	z-index: 10;
+	font-size: 1.5rem;
+}
+
+@media screen and (max-width: 850px) {
+	.cookie-banner{
+		font-size: 13px;
+	}
+  }
+
+  @media screen and (max-width: 650px) {
+	.cookie-banner{
+		font-size: 9px;
+	}
+  }
+
+.cookie-btn{
+	background-color: rgb(230, 57, 26);
+	padding: 0.5rem;
+	border-radius: 5px ;
+	border: transparent;
+}
+
+.cookie-btn:hover{
+	cursor: pointer;
+	background-color: rgb(204, 119, 104);
+}
+
+.active{
+	bottom: 0;
+}
