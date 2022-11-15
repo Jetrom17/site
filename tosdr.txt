@@ -26,7 +26,7 @@
 #
 
 
-Domain: 
+Domains: 
 jetronix.tk
 
 Document-Name: Política de privacidade
