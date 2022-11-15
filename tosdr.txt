@@ -1,13 +1,38 @@
-jetronix.tk/tosdr.txt
-    ___  _______   ___  _______   ___          
-   |\  \|\  ___ \ |\  \|\  ___ \ |\  \         
-   \ \  \ \   __/|\ \  \ \   __/|\ \  \        
- __ \ \  \ \  \_|/_\ \  \ \  \_|/_\ \  \       
-|\  \\_\  \ \  \_|\ \ \  \ \  \_|\ \ \  \____  
-\ \________\ \_______\ \__\ \_______\ \_______\
- \|________|\|_______|\|__|\|_______|\|_______|
-                                               
-                                                                                                                                                                                                                                                                                                                                                                                      
-Política de Privacidade:
+# jetronix.tk/txt
+#   
+#    ___  _______   ___  _______   ___          
+#   |\  \|\  ___ \ |\  \|\  ___ \ |\  \         
+#   \ \  \ \   __/|\ \  \ \   __/|\ \  \        
+# __ \ \  \ \  \_|/_\ \  \ \  \_|/_\ \  \       
+#|\  \\_\  \ \  \_|\ \ \  \ \  \_|\ \ \  \____  
+#\ \________\ \_______\ \__\ \_______\ \_______\
+# \|________|\|_______|\|__|\|_______|\|_______|
+#
+#                                      
+# 
+# Document-Name     - The Name of your document. e.g. "Privacy Policy"
+# Document-Url      - The Full url to your document e.g. "https://jetronix.tk/legal"
+# Path              - The XPath of your document. Read more about it here: https://en.wikipedia.org/wiki/XPath
+# 
+# 
+#
+#
+# Para definir os domínios e subdomínios do seu serviço, use a seguinte chave:
+#
+# Domains           - Comma separated list of domains without www prefix or paths. e.g. "jetronix.tk"
+#
+#
+# 
+#
 
-Em breve...
+
+Domain: 
+jetronix.tk
+
+Document-Name: Política de privacidade
+URL: https://jetronix.tk/txt
+Path: /html
+
+Document-Name: Information Legal
+URL: https://jetronix.tk/legal
+Path: /html
