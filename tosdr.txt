@@ -24,15 +24,3 @@
 #
 # 
 #
-
-
-Domains: 
-jetronix.tk
-
-Document-Name: Política de privacidade
-URL: https://jetronix.tk/txt
-Path: /html
-
-Document-Name: Information Legal
-URL: https://jetronix.tk/legal
-Path: /html
