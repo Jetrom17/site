@@ -18,6 +18,33 @@
 #
 # Domains           - Comma separated list of domains without www prefix or paths. e.g. "jetronix.tk"
 #
-#
+#array (
+#  'duplicate_keys' => 
+#  array (
+#  ),
+#  'missing_domain_list' => true,
+#  'invalid_domain_list' => 
+#  array (
+#  ),
+#  'id_not_numeric' => 
+#  ),
+#  'id_invalid' => 
+#  array (
+# ),
+#  'id_no_match_domains' => 
+#  array (
+#  ),
+#  'missing_documents' => -1,
+#  'missing_document_name' => 
+#  array (
+#  ),
+#  'missing_document_url' => 
+#  array (
+# ),
+#  'missing_document_path' => 
+#  array (
+#  ),
+#)
 # 
+#
 #
