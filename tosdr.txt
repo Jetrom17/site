@@ -12,12 +12,9 @@
 # 
 # Document-Name     - The Name of your document. e.g. "Privacy Policy"
 # Document-Url      - The Full url to your document e.g. "https://jetronix.tk/legal"
-# Path              - The XPath of your document. Read more about it here: https://en.wikipedia.org/wiki/XPath
 # 
 # 
-#
-#
-# Para definir os domínios e subdomínios do seu serviço, use a seguinte chave:
+# 
 #
 # Domains           - Comma separated list of domains without www prefix or paths. e.g. "jetronix.tk"
 #
